@@ -35,6 +35,7 @@ dependencies {
 
     // Discord
     include(implementation("dev.kord:kord-core:0.15.0")!!)
+    include(implementation("net.kyori:adventure-platform-fabric:5.13.0")!!)
 }
 
 tasks {

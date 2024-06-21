@@ -11,6 +11,7 @@
     "MixinInventory",
     "MixinPlayer",
     "MixinResultSlot",
-    "MixinServerPlayer"
+    "MixinServerPlayer",
+    "MixinPlayerChatMessage"
   ]
 }
