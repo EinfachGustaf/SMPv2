@@ -1,6 +1,5 @@
 package live.einfachgustaf.mods.smp.extensions
 
-import live.einfachgustaf.mods.smp.audiences
 import net.minecraft.server.level.ServerPlayer
 import net.minecraft.world.entity.player.Player
 import net.silkmc.silk.core.Silk
