@@ -40,10 +40,6 @@ dependencies {
     implementation("net.kyori:adventure-text-minimessage:4.17.0")
     modImplementation("net.kyori:adventure-platform-fabric:5.14.1")
 
-    // Discord
-    include(implementation("net.dv8tion:JDA:5.2.1")!!)
-    include(implementation("club.minnced:jda-ktx:0.12.0")!!)
-
     // Polymer
     modImplementation("eu.pb4:polymer-core:$polymerVersion")
     modImplementation("eu.pb4:polymer-resource-pack:$polymerVersion")
