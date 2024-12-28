@@ -2,7 +2,7 @@ val javaVersion = 21
 val silkVersion = "1.10.7"
 
 plugins {
-    kotlin("jvm") version "2.0.21"
+    kotlin("jvm") version "2.1.0"
     kotlin("plugin.serialization") version "2.0.21"
     id("fabric-loom") version "1.8.10"
 }
