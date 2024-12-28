@@ -38,7 +38,7 @@ dependencies {
     // Adventure
     implementation("net.kyori:adventure-api:4.18.0")
     implementation("net.kyori:adventure-text-minimessage:4.17.0")
-    modImplementation("net.kyori:adventure-platform-fabric:5.14.1")
+    modImplementation("net.kyori:adventure-platform-fabric:6.2.0")
 }
 
 tasks {
