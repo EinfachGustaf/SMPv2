@@ -14,7 +14,6 @@ version = "0.1+1.21.1"
 
 repositories {
     mavenCentral()
-    maven("https://maven.nucleoid.xyz") // For Polymer
 }
 
 dependencies {
