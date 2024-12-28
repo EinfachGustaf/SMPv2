@@ -28,9 +28,6 @@ fun initServer() {
 
     // Listener
     postStart()
-
-    // Commands
-    smpReloadCommand()
 }
 
 @OptIn(ExperimentalSilkApi::class)
