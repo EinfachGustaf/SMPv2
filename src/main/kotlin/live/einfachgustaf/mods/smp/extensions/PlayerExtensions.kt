@@ -13,10 +13,3 @@ import net.silkmc.silk.core.Silk
 fun Player.asServerPlayer(): ServerPlayer? {
     return Silk.server?.playerList?.getPlayer(this.uuid)
 }
-
-/**
- * Extension function to get the audience of a player.
- *
- * @return the audience of the player.
- */
-fun Player.audience() = audiences.player(uuid)
