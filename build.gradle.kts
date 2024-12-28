@@ -39,10 +39,6 @@ dependencies {
     implementation("net.kyori:adventure-api:4.18.0")
     implementation("net.kyori:adventure-text-minimessage:4.17.0")
     modImplementation("net.kyori:adventure-platform-fabric:5.14.1")
-
-    // Polymer
-    modImplementation("eu.pb4:polymer-core:$polymerVersion")
-    modImplementation("eu.pb4:polymer-resource-pack:$polymerVersion")
 }
 
 tasks {
