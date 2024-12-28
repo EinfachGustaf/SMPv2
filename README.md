@@ -3,6 +3,8 @@
 </p>
 <p align="center">
   <a href="https://discord.gg/qCZw9UeV7h"><img src="https://img.shields.io/discord/1065307087724363796?color=5865F2&logo=discord&logoColor=white" alt="Discord server" />
+  <img src="https://img.shields.io/badge/Version-0.1+1.21.4-blue.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Minecraft-1.21.1-green.svg" alt="Minecraft"></a>
 </p>
 
 # 🦈 EinfachGustaf SMP
