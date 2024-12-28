@@ -25,8 +25,6 @@ dependencies {
     modImplementation("net.fabricmc:fabric-language-kotlin:1.12.2+kotlin.2.0.20")
 
     modImplementation("net.silkmc:silk-core:$silkVersion")
-    modImplementation("net.silkmc:silk-commands:$silkVersion")
-    modImplementation("net.silkmc:silk-igui:$silkVersion")
 
     include(implementation("me.obsilabor", "alert", "1.0.8"))
     include(implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")!!)
@@ -34,11 +32,6 @@ dependencies {
     // Database
     include(implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.2.1")!!)
     include(implementation("org.mongodb:bson-kotlinx:5.2.1")!!)
-
-    // Adventure
-    implementation("net.kyori:adventure-api:4.18.0")
-    implementation("net.kyori:adventure-text-minimessage:4.17.0")
-    modImplementation("net.kyori:adventure-platform-fabric:5.14.1")
 }
 
 tasks {
