@@ -15,7 +15,6 @@ class MinecraftWatcher(val parent: ChatSync) {
     }
 
     fun hook(kord: Kord) {
-        // TODO: forbidden pings like (everyone, here, roles)
         ServerMessageEvents.CHAT_MESSAGE.register { message, player, _ ->
             if (message.signedContent().contains("@")) {
                 player.sendSystemMessage(literalText("You are not allowed to mention Discord users!") {
