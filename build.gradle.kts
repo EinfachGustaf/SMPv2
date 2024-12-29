@@ -14,6 +14,8 @@ version = "0.1+1.21.1"
 
 repositories {
     mavenCentral()
+    maven("https://repo.kord.dev/snapshots") // kord
+    maven("https://snapshots-repo.kordex.dev") // fox kordex (kord extensions)
 }
 
 dependencies {
@@ -35,6 +37,7 @@ dependencies {
 
     // Discord
     include(implementation("dev.kord:kord-core:0.15.0")!!)
+    include(implementation("dev.kordex:kord-extensions:2.3.1-SNAPSHOT")!!)
 }
 
 tasks {
