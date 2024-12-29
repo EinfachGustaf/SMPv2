@@ -36,13 +36,13 @@ class DiscordWatcher(val parent: ChatSync) {
 
                     if (query != null) {
                         buildMessage = buildMessage.replace(match.value, playerName)
-                        query.sendNotifcation(literalText("Du wurdest von ${member?.username ?: "Unknown"} in Discord erwähnt!") {  }, icon = Items.RED_DYE.defaultInstance, type = AdvancementType.GOAL)
+                        query.sendNotifcation(literalText("Du wurdest von ${member?.effectiveName ?: "Unknown"} in Discord erwähnt!") {  }, icon = Items.RED_DYE.defaultInstance, type = AdvancementType.GOAL)
                     }
                 }
 
             Silk.server?.broadcastText(literalText {
                 text("[Discord] ")
-                text(member?.username ?: "Unknown")
+                text(member?.effectiveName ?: "Unknown")
                 text(": ")
                 text(buildMessage)
             })
