@@ -18,6 +18,8 @@ class DiscordWatcher(val parent: ChatSync) {
             if (message.author?.isBot == true)
                 return@on
 
+            MinecraftWatcher.lastName = ""
+
             Silk.server?.broadcastText(literalText {
                 text("[Discord] ")
                 text(member?.username ?: "Unknown")

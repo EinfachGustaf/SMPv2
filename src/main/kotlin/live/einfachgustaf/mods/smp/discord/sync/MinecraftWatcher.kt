@@ -10,7 +10,9 @@ import net.silkmc.silk.core.text.literalText
 
 class MinecraftWatcher(val parent: ChatSync) {
 
-    var lastName = ""; private set
+    companion object {
+        var lastName = ""; internal set
+    }
 
     fun hook(kord: Kord) {
         // TODO: forbidden pings like (everyone, here, roles)
