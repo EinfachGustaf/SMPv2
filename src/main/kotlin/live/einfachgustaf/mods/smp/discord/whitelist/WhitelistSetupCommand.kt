@@ -29,6 +29,9 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                 title = "Whitelist"
                                 description = "Klicke auf den Button, um dich zu whitelisten!"
                                 color = Color(84, 245, 66)
+                                footer {
+                                    text = "EinfachGustaf SMP | Whitelist"
+                                }
                             }
                             action {
                                 LOGGER.warn("WhitelistModal action not implemented!")
