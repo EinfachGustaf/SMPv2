@@ -8,7 +8,6 @@ import dev.kord.core.entity.channel.TextChannel
 
 class ChatSync {
 
-    lateinit var channel: TextChannel
     val channelSnowflake = Snowflake(System.getenv("DISCORD_CHAT_SYNC_CHANNEL"))
     val shutdownLogic = SyncShutdownLogic(this)
     val discordWatcher = DiscordWatcher(this)
