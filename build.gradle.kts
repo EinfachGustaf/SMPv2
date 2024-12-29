@@ -34,7 +34,7 @@ dependencies {
     include(implementation("org.mongodb:bson-kotlinx:5.2.1")!!)
 
     // Discord
-    implementation("dev.kord:kord-core:0.15.0")
+    include(implementation("dev.kord:kord-core:0.15.0")!!)
 }
 
 tasks {
