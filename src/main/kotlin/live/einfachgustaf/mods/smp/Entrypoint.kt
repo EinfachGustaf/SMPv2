@@ -1,12 +1,15 @@
 package live.einfachgustaf.mods.smp
 
+import kotlinx.coroutines.launch
 import live.einfachgustaf.mods.smp.advancement.AdvancementRegistry
 import live.einfachgustaf.mods.smp.advancement.Advancements
 import live.einfachgustaf.mods.smp.data.db.MongoDB
+import live.einfachgustaf.mods.smp.discord.DiscordBot
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents
 import net.silkmc.silk.core.annotations.ExperimentalSilkApi
 import net.silkmc.silk.core.event.Events
 import net.silkmc.silk.core.event.Server
+import net.silkmc.silk.core.task.mcCoroutineScope
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
@@ -31,4 +34,9 @@ fun initServer() {
 fun postStart() = Events.Server.postStart.listen {
     // ADVANCEMENTS
     AdvancementRegistry
+
+    // DISCORD BOT
+    mcCoroutineScope.launch {
+        DiscordBot(System.getenv("DISCORD_BOT_TOKEN")).boot()
+    }
 }
