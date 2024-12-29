@@ -1,6 +1,7 @@
 package live.einfachgustaf.mods.smp.discord.sync
 
 import dev.kord.core.Kord
+import dev.kord.core.entity.ReactionEmoji
 import dev.kord.core.event.message.MessageCreateEvent
 import dev.kord.core.on
 import net.silkmc.silk.core.Silk
@@ -23,6 +24,8 @@ class DiscordWatcher(val parent: ChatSync) {
                 text(": ")
                 text(message.content)
             })
+
+            message.addReaction(ReactionEmoji.Unicode("🟢"))
         }
     }
 }
