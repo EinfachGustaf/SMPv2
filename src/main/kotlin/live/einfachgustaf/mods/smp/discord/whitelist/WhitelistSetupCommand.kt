@@ -8,7 +8,8 @@ import dev.kordex.core.components.publicButton
 import dev.kordex.core.extensions.Extension
 import dev.kordex.core.extensions.publicSlashCommand
 import dev.kordex.core.i18n.toKey
-import live.einfachgustaf.mods.smp.LOGGER
+import live.einfachgustaf.mods.smp.utils.UUIDFetcher
+import okhttp3.OkHttpClient
 
 class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand") : Extension() {
 
@@ -33,7 +34,77 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                 }
                             }
                             action {
-                                LOGGER.warn("WhitelistModal action not implemented!")
+                                val playerName = it?.playerName?.value
+                                val uuidFetcher = UUIDFetcher(OkHttpClient())
+                                val key = it?.key?.value
+
+                                if (playerName == null) {
+                                    respond {
+                                        embed {
+                                            title = "Whitelist"
+                                            description = "Failed to fetch player name."
+                                            color = Color(245, 66, 66)
+                                        }
+                                    }
+                                    return@action
+                                }
+
+                                if (key == null) {
+                                    respond {
+                                        embed {
+                                            title = "Whitelist"
+                                            description = "Failed to fetch key."
+                                            color = Color(245, 66, 66)
+                                        }
+                                    }
+                                    return@action
+                                }
+
+                                val uuid = uuidFetcher.fetchUUID(playerName)
+
+                                if (uuid != null) {
+                                    val betaKey = DiscordWhitelist.getKey(key)
+
+                                    if (betaKey != null) {
+                                        if (betaKey.isClaimed) {
+                                            respond {
+                                                embed {
+                                                    title = "Whitelist"
+                                                    description = "Key ||`$key`|| is already claimed."
+                                                    color = Color(245, 66, 66)
+                                                }
+                                            }
+                                            return@action
+                                        }
+
+                                        val betaKeyEdited = betaKey.copy(claimedBy = uuid)
+                                        DiscordWhitelist.upsert(playerName, betaKeyEdited)
+
+                                        respond {
+                                            embed {
+                                                title = "Whitelist"
+                                                description = "Player $playerName has been whitelisted successfully!"
+                                                color = Color(84, 245, 66)
+                                            }
+                                        }
+                                    } else {
+                                        respond {
+                                            embed {
+                                                title = "Whitelist"
+                                                description = "Failed to find key ||`$betaKey`||."
+                                                color = Color(245, 66, 66)
+                                            }
+                                        }
+                                    }
+                                } else {
+                                    respond {
+                                        embed {
+                                            title = "Whitelist"
+                                            description = "Failed to fetch UUID for player $playerName."
+                                            color = Color(245, 66, 66)
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

@@ -6,6 +6,7 @@ import dev.kord.gateway.PrivilegedIntent
 import dev.kordex.core.ExtensibleBot
 import live.einfachgustaf.mods.smp.LOGGER
 import live.einfachgustaf.mods.smp.discord.sync.ChatSync
+import live.einfachgustaf.mods.smp.discord.whitelist.WhitelistKeyCommand
 import live.einfachgustaf.mods.smp.discord.whitelist.WhitelistSetupCommand
 
 class DiscordBot(private val token: String) {
@@ -20,6 +21,7 @@ class DiscordBot(private val token: String) {
             bot = ExtensibleBot(token) {
                 extensions {
                     add(::WhitelistSetupCommand)
+                    add(::WhitelistKeyCommand)
                 }
                 intents {
                     + Intent.MessageContent
