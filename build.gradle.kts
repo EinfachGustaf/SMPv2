@@ -14,6 +14,8 @@ version = "0.1+1.21.1"
 
 repositories {
     mavenCentral()
+    maven("https://repo.kord.dev/snapshots") // kord
+    maven("https://snapshots-repo.kordex.dev") // fox kordex (kord extensions)
 }
 
 dependencies {
@@ -28,6 +30,7 @@ dependencies {
 
     include(implementation("me.obsilabor", "alert", "1.0.8"))
     include(implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")!!)
+    include(implementation("com.squareup.okhttp3:okhttp:4.12.0")!!)
 
     // Database
     include(implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.2.1")!!)
@@ -35,6 +38,7 @@ dependencies {
 
     // Discord
     include(implementation("dev.kord:kord-core:0.15.0")!!)
+    include(implementation("dev.kordex:kord-extensions:2.3.1-SNAPSHOT")!!)
 }
 
 tasks {

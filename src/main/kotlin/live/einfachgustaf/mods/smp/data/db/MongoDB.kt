@@ -17,7 +17,7 @@ import net.silkmc.silk.core.task.mcCoroutineScope
 object MongoDB : AbstractDataDriver() {
 
     private val mongoClient = MongoClient.create(System.getenv("MONGODB_URL"))
-    private val database = mongoClient.getDatabase(System.getenv("MONGODB_DATABASE"))
+    val database = mongoClient.getDatabase(System.getenv("MONGODB_DATABASE"))
     private val advancementsCollection = database.getCollection<PlayerAdvancementData>("PLAYER_ADVANCEMENTS")
 
     /**
