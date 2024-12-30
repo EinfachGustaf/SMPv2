@@ -32,6 +32,7 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                 color = Color(84, 245, 66)
                                 footer {
                                     text = "EinfachGustaf SMP | Whitelist"
+                                    einfachGustafIcon()
                                 }
                             }
                             action {
@@ -56,7 +57,13 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                             title = "Whitelist"
                                             description = "Failed to fetch key."
                                             color = Color(245, 66, 66)
+
+                                            footer {
+                                                text = "EinfachGustaf SMP | Whitelist"
+                                                einfachGustafIcon()
+                                            }
                                         }
+
                                     }
                                     return@action
                                 }
@@ -73,6 +80,11 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                                     title = "Whitelist"
                                                     description = "Key ||`$key`|| is already claimed."
                                                     color = Color(245, 66, 66)
+
+                                                    footer {
+                                                        text = "EinfachGustaf SMP | Whitelist"
+                                                        einfachGustafIcon()
+                                                    }
                                                 }
                                             }
                                             return@action
