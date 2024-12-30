@@ -62,8 +62,8 @@ object MasterOfExplosion {
                 rewards = setOf(
                     itemStack(Items.ENCHANTED_BOOK) {
                         val enchantmentRegistry =
-                            Silk.serverOrThrow.registryAccess().get(Registries.ENCHANTMENT).get()
-                        enchant(enchantmentRegistry.value().get(Enchantments.BLAST_PROTECTION).get(), 4)
+                            Silk.serverOrThrow.registryAccess().registry(Registries.ENCHANTMENT).get()
+                        enchant(enchantmentRegistry.getHolderOrThrow(Enchantments.BLAST_PROTECTION), 4)
                     }
                 )
             ),

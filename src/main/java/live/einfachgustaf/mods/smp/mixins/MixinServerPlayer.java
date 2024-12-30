@@ -3,7 +3,6 @@ package live.einfachgustaf.mods.smp.mixins;
 import live.einfachgustaf.mods.smp.event.PlayerDamageEvent;
 import live.einfachgustaf.mods.smp.event.PlayerDropItemEvent;
 import me.obsilabor.alert.EventManager;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -21,8 +20,8 @@ public class MixinServerPlayer {
         EventManager.callEvent(new PlayerDropItemEvent((ServerPlayer) (Object) this, itemStack));
     }
 
-    @Inject(at = @At("HEAD"), method = "hurtServer")
-    public void injectHurt(ServerLevel serverLevel, DamageSource damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(at = @At("HEAD"), method = "hurt")
+    public void injectHurt(DamageSource damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
         EventManager.callEvent(new PlayerDamageEvent((ServerPlayer) (Object) this, f, damageSource));
     }
 }
