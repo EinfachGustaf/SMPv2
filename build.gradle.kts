@@ -2,7 +2,7 @@ val javaVersion = 21
 val silkVersion = "1.10.7"
 
 plugins {
-    val kotlinVersion = "2.1.0"
+    val kotlinVersion = "2.0.0"
 
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
