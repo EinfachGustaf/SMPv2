@@ -6,11 +6,11 @@ import dev.kord.rest.builder.message.embed
 import dev.kordex.core.commands.Arguments
 import dev.kordex.core.commands.application.slash.ephemeralSubCommand
 import dev.kordex.core.commands.converters.impl.defaultingInt
-import dev.kordex.core.commands.converters.impl.int
 import dev.kordex.core.commands.converters.impl.string
 import dev.kordex.core.extensions.Extension
 import dev.kordex.core.extensions.ephemeralSlashCommand
 import dev.kordex.core.i18n.toKey
+import live.einfachgustaf.mods.smp.discord.extensions.einfachGustafIcon
 
 class WhitelistKeyCommand(override val name: String = "whitelistkeycommand"): Extension() {
 
@@ -34,6 +34,7 @@ class WhitelistKeyCommand(override val name: String = "whitelistkeycommand"): Ex
                             color = Color(84, 245, 66)
                             footer {
                                 text = "EinfachGustaf SMP | Whitelist"
+                                einfachGustafIcon()
                             }
                         }
                     }
@@ -59,6 +60,11 @@ class WhitelistKeyCommand(override val name: String = "whitelistkeycommand"): Ex
                             } else {
                                 description = "Error. Maybe Key ||`${arguments.key}`|| not found"
                                 color = Color(245, 66, 66)
+                            }
+
+                            footer {
+                                text = "EinfachGustaf SMP | Whitelist"
+                                einfachGustafIcon()
                             }
                         }
                     }

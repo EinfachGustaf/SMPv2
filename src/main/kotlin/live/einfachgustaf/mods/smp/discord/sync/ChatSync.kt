@@ -5,6 +5,7 @@ import dev.kord.common.entity.Snowflake
 import dev.kord.core.Kord
 import dev.kord.core.behavior.channel.createEmbed
 import dev.kord.core.entity.channel.TextChannel
+import live.einfachgustaf.mods.smp.discord.extensions.einfachGustafIcon
 
 class ChatSync {
 
@@ -29,6 +30,7 @@ class ChatSync {
             description = "Der SMP Server hat sich erfolgreich mit dem Discord Channel verbunden! Ihr könnt ab jetzt mit den Leuten auf dem Minecraft Server hier kommunizieren."
             footer {
                 text = "EinfachGustaf SMP | Sende einfach eine Nachricht im Chat!"
+                einfachGustafIcon()
             }
             color = Color(84, 245, 66)
         }

@@ -8,6 +8,7 @@ import dev.kordex.core.components.publicButton
 import dev.kordex.core.extensions.Extension
 import dev.kordex.core.extensions.publicSlashCommand
 import dev.kordex.core.i18n.toKey
+import live.einfachgustaf.mods.smp.discord.extensions.einfachGustafIcon
 import live.einfachgustaf.mods.smp.utils.UUIDFetcher
 import okhttp3.OkHttpClient
 
@@ -85,6 +86,11 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                                 title = "Whitelist"
                                                 description = "Player $playerName has been whitelisted successfully!"
                                                 color = Color(84, 245, 66)
+
+                                                footer {
+                                                    text = "EinfachGustaf SMP | Whitelist"
+                                                    einfachGustafIcon()
+                                                }
                                             }
                                         }
                                     } else {
@@ -93,6 +99,11 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                                 title = "Whitelist"
                                                 description = "Failed to find key ||`$betaKey`||."
                                                 color = Color(245, 66, 66)
+
+                                                footer {
+                                                    text = "EinfachGustaf SMP | Whitelist"
+                                                    einfachGustafIcon()
+                                                }
                                             }
                                         }
                                     }
@@ -102,6 +113,11 @@ class WhitelistSetupCommand(override val name: String = "whitelistsetupcommand")
                                             title = "Whitelist"
                                             description = "Failed to fetch UUID for player $playerName."
                                             color = Color(245, 66, 66)
+
+                                            footer {
+                                                text = "EinfachGustaf SMP | Whitelist"
+                                                einfachGustafIcon()
+                                            }
                                         }
                                     }
                                 }
