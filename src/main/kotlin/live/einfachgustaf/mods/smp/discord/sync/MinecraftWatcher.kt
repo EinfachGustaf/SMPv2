@@ -8,12 +8,24 @@ import net.fabricmc.fabric.api.message.v1.ServerMessageEvents
 import net.silkmc.silk.core.task.mcCoroutineScope
 import net.silkmc.silk.core.text.literalText
 
+/**
+ * Watches the Minecraft chat.
+ * @param parent The parent [ChatSync] instance.
+ */
 class MinecraftWatcher(val parent: ChatSync) {
 
     companion object {
+
+        /**
+         * The last name of the player who sent a message in the Minecraft chat.
+         */
         var lastName = ""; internal set
     }
 
+    /**
+     * Hooks the watcher.
+     * @param kord The [Kord] instance.
+     */
     fun hook(kord: Kord) {
         ServerMessageEvents.CHAT_MESSAGE.register { message, player, _ ->
             if (message.signedContent().contains("@")) {
