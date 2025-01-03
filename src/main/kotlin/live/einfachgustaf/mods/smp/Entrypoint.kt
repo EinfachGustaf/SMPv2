@@ -13,10 +13,19 @@ import net.silkmc.silk.core.task.mcCoroutineScope
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
+/**
+ * The logger for the SMP mod.
+ */
 val LOGGER: Logger = LogManager.getLogger("smp")
 
+/**
+ * The main entry point for the SMP mod.
+ */
 fun initMain() = Unit
 
+/**
+ * The entry point for the SMP mod.
+ */
 fun initServer() {
     // DATABASE
     MongoDB
@@ -30,6 +39,9 @@ fun initServer() {
     postStart()
 }
 
+/**
+ * The post-start listener for the SMP mod.
+ */
 @OptIn(ExperimentalSilkApi::class)
 fun postStart() = Events.Server.postStart.listen {
     // ADVANCEMENTS

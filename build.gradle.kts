@@ -6,6 +6,7 @@ plugins {
 
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.serialization") version kotlinVersion
+    id("org.jetbrains.dokka") version kotlinVersion
     id("fabric-loom") version "1.8.10"
 }
 

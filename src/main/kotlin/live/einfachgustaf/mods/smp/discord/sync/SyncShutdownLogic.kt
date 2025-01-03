@@ -9,8 +9,16 @@ import net.silkmc.silk.core.annotations.ExperimentalSilkApi
 import net.silkmc.silk.core.event.ServerEvents
 import net.silkmc.silk.core.task.mcCoroutineScope
 
+/**
+ * Represents the shutdown logic for the chat sync.
+ * @param parent The parent [ChatSync] instance.
+ */
 class SyncShutdownLogic(private val parent: ChatSync) {
 
+    /**
+     * Hooks the shutdown logic.
+     * @param kord The [Kord] instance.
+     */
     @OptIn(ExperimentalSilkApi::class)
     fun hook(kord: Kord) {
         ServerEvents.preStop.listen {

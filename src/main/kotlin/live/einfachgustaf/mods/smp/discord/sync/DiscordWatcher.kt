@@ -11,8 +11,16 @@ import net.silkmc.silk.core.Silk
 import net.silkmc.silk.core.text.broadcastText
 import net.silkmc.silk.core.text.literalText
 
+/**
+ * Watches the Discord chat.
+ * @param parent The parent [ChatSync] instance.
+ */
 class DiscordWatcher(val parent: ChatSync) {
 
+    /**
+     * Hooks the watcher.
+     * @param kord The [Kord] instance.
+     */
     fun hook(kord: Kord) {
         // TODO: ping player (@mc:playername)
         kord.on<MessageCreateEvent> {

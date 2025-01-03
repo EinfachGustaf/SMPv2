@@ -6,10 +6,25 @@ import dev.kord.gateway.PrivilegedIntent
 import live.einfachgustaf.mods.smp.LOGGER
 import live.einfachgustaf.mods.smp.discord.sync.ChatSync
 
+/**
+ * Represents the Discord bot.
+ * @param token The bot token.
+ */
 class DiscordBot(private val token: String) {
+
+    /**
+     * The [Kord] instance.
+     */
     lateinit var kord: Kord
+
+    /**
+     * The [ChatSync] instance.
+     */
     val chatSync = ChatSync()
 
+    /**
+     * Boots the Discord bot.
+     */
     suspend fun boot() {
         LOGGER.info("Booting Discord bot...")
         try {
