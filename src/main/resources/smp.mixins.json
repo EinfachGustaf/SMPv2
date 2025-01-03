@@ -9,7 +9,7 @@
     "MixinBlockItem",
     "MixinCandleBlock",
     "MixinInventory",
-    "MixinPlayer",
+    "MixinFoodProperties",
     "MixinResultSlot",
     "MixinServerPlayer"
   ]
