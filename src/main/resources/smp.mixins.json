@@ -12,5 +12,8 @@
     "MixinPlayer",
     "MixinResultSlot",
     "MixinServerPlayer"
+  ],
+  "server": [
+    "MixinPlayerChatMessage"
   ]
 }
