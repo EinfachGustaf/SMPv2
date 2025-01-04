@@ -27,8 +27,7 @@ fun initMain() = Unit
  * The entry point for the SMP mod.
  */
 fun initServer() {
-    // DATABASE
-    MongoDB
+    // TODO: DATABASE
 
     // EVENTS
     ServerPlayConnectionEvents.JOIN.register { player, _, _ ->
