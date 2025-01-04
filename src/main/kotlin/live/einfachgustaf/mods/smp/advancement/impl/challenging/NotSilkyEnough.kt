@@ -35,8 +35,8 @@ object NotSilkyEnough {
                         count = 1
 
                         val enchantmentRegistry =
-                            Silk.serverOrThrow.registryAccess().registry(Registries.ENCHANTMENT).get()
-                        enchant(enchantmentRegistry.getHolderOrThrow(Enchantments.SILK_TOUCH), 1)
+                            Silk.serverOrThrow.registryAccess().get(Registries.ENCHANTMENT).get()
+                        enchant(enchantmentRegistry.value().get(Enchantments.SILK_TOUCH).get(), 1)
                     }
                 )
             ),
