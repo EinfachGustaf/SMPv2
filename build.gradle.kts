@@ -28,7 +28,7 @@ dependencies {
     modImplementation("net.silkmc:silk-core:$silkVersion")
 
     include(implementation("me.obsilabor", "alert", "1.0.8"))
-    include(implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")!!)
+    include(implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.0")!!)
 
     // Database
     include(implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.2.1")!!)
