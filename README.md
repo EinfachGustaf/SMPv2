@@ -34,7 +34,7 @@ Currently, you have to compile it yourself. Java 21 is required to compile the p
 
 ### 🛠️ Compiling
 ```shell
-git clone https://github.com/DinoMarlir/einfachgustaf-smp.git
-cd einfachgustaf-smp
+git clone https://github.com/EinfachGustaf/SMPv2.git
+cd SMPv2
 ./gradlew build
 ```
