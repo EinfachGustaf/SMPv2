@@ -32,7 +32,7 @@ dependencies {
 
     // Database
     include(implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.3.1")!!)
-    include(implementation("org.mongodb:bson-kotlinx:5.3.1")!!)
+    include(implementation("org.mongodb:bson-kotlinx:5.4.0")!!)
 
     // Discord
     include(implementation("dev.kord:kord-core:0.15.0")!!)
