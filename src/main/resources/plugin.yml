@@ -1,0 +1,6 @@
+name: SMPv2
+author: EinfachGustaf-Development-Team
+version: 1.0
+api-version: 1.20+
+main: live.einfachgustaf.plugins.smp.Entrypoint
+commands:
