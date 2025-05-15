@@ -1,5 +1,8 @@
-# Ignore Gradle project-specific cache directory
+run
 .gradle
-
-# Ignore Gradle build output directory
+.idea
 build
+*.launch
+*.DS_Store
+.env
+.kotlin
