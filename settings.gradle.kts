@@ -8,3 +8,4 @@ pluginManagement {
 rootProject.name = "smp"
 
 include("smp-core")
+include("smp-core-mod")

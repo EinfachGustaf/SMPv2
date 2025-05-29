@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "live.einfachgustaf.smp.mod.core.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "injectors": {
+    "defaultRequire": 0
+  },
+  "mixins": []
+}

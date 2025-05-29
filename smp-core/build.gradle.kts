@@ -7,11 +7,11 @@ plugins {
 }
 
 dependencies {
-    paperweight.paperDevBundle("1.21.5-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle(libs.versions.paper)
 }
 
 paperPluginYaml {
-    main = "live.einfachgustaf.smp.core.Entrypoint"
+    main = "live.einfachgustaf.smp.plugin.core.Entrypoint"
     listOf("DinoMarlir", "Fogknight").forEach { authors.add(it) }
     apiVersion = "1.21.5"
     version = project.version.toString()

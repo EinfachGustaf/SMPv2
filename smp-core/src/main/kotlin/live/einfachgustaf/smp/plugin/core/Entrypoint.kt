@@ -1,4 +1,4 @@
-package live.einfachgustaf.smp.core
+package live.einfachgustaf.smp.plugin.core
 
 import org.bukkit.plugin.java.JavaPlugin
 
