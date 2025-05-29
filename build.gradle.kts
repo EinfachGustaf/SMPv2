@@ -5,7 +5,7 @@ plugins {
 
 allprojects {
     group = "live.einfachgustaf.smp"
-    version = "1.0"
+    version = "0.1+1.21.5"
 
     apply(plugin = "java")
 
