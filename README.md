@@ -21,6 +21,11 @@ official Minecraft server of the German YouTuber [EinfachGustaf](https://youtube
 - Custom Items, Blocks and Equipment
 - Custom world
 
+## 🎯️ Project Structure
+| Module     | Description                                                         |
+|------------|---------------------------------------------------------------------|
+| `smp-core` | The core module of the SMP, containing the main logic and features. |
+
 ## ⬇️ Installation
 Currently, you have to compile it yourself. Java 21 is required to compile the project.
 
