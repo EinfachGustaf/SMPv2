@@ -9,5 +9,5 @@ repositories {
 
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
-    libs.bundles.igniteMod
+    compileOnly(libs.bundles.igniteMod)
 }
