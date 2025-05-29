@@ -8,6 +8,9 @@ plugins {
 
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
+
+    compileOnly(libs.alert)
+    compileOnly(project(":smp-core-mod"))
 }
 
 paperPluginYaml {

@@ -10,4 +10,5 @@ repositories {
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
     compileOnly(libs.bundles.igniteMod)
+    implementation(libs.alert)
 }
