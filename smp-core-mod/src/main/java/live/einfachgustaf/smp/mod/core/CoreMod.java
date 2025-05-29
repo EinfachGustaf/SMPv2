@@ -5,12 +5,22 @@ import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * CoreMod is a singleton class that represents the core mod of the SMP plugin.
+ * It is responsible for managing the core plugin instance and its lifecycle.
+ * This class should be initialized once during the plugin's startup.
+ */
 public class CoreMod {
     private static CoreMod instance;
-
     private Plugin corePlugin;
     private CorePluginLifecycleType lastLifecycleType = null;
 
+    /**
+     * Initializes the CoreMod singleton instance.
+     * This method should be called once during the plugin's startup.
+     * @param corePlugin the core plugin instance that this mod is associated with
+     * @param lastLifecycleType the last lifecycle type of the core plugin can be null if not applicable
+     */
     public static void initialize(@NotNull Plugin corePlugin, @Nullable CorePluginLifecycleType lastLifecycleType) {
         if (instance != null) {
             throw new IllegalStateException("CoreMod is already initialized!");
@@ -31,6 +41,7 @@ public class CoreMod {
      * Gets the singleton instance of CoreMod.
      * @return the CoreMod instance
      */
+    @Nullable
     public static CoreMod getInstance() {
         return instance;
     }
