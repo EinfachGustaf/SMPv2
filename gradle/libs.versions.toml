@@ -1,7 +1,9 @@
 [versions]
 kotlin = "2.1.21"
-userdev = "2.0.0-beta.16"
+userdev = "2.0.0-beta.17"
+resourceFactory = "1.3.0"
 
 [plugins]
 jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 userdev = { id = "io.papermc.paperweight.userdev", version.ref = "userdev" }
+resourceFactory = { id = "xyz.jpenilla.resource-factory-bukkit-convention", version.ref = "resourceFactory" }

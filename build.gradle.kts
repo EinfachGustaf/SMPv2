@@ -4,6 +4,9 @@ plugins {
 }
 
 allprojects {
+    group = "live.einfachgustaf.smp"
+    version = "1.0"
+
     repositories {
         mavenCentral()
     }
