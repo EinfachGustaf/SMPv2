@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
  */
 public class CoreMod {
     private static CoreMod instance;
-    private Plugin corePlugin;
+    private final Plugin corePlugin;
     private CorePluginLifecycleType lastLifecycleType = null;
 
     /**
