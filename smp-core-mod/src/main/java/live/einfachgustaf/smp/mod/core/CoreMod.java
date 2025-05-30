@@ -5,6 +5,8 @@ import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.logging.Logger;
+
 /**
  * CoreMod is a singleton class that represents the core mod of the SMP plugin.
  * It is responsible for managing the core plugin instance and its lifecycle.
@@ -14,6 +16,7 @@ public class CoreMod {
     private static CoreMod instance;
     private final Plugin corePlugin;
     private CorePluginLifecycleType lastLifecycleType = null;
+    private Logger logger = Logger.getLogger("CoreMod");
 
     /**
      * Initializes the CoreMod singleton instance.
@@ -70,5 +73,15 @@ public class CoreMod {
      */
     public void setLastLifecycleType(CorePluginLifecycleType lastLifecycleType) {
         this.lastLifecycleType = lastLifecycleType;
+    }
+
+    /**
+     * Gets the logger for the core mod.
+     * This logger can be used for logging messages related to the core mod.
+     * @return the logger instance
+     */
+    @NotNull
+    public Logger getLogger() {
+        return logger;
     }
 }
