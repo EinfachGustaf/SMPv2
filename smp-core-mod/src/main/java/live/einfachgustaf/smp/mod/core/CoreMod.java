@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 public class CoreMod {
     private static CoreMod instance;
     private final Plugin corePlugin;
-    private CorePluginLifecycleType lastLifecycleType = null;
+    private CorePluginLifecycleType lastLifecycleType;
     private Logger logger = Logger.getLogger("CoreMod");
 
     /**

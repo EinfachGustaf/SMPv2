@@ -9,15 +9,13 @@ public class CorePluginLifecycleListener {
 
     @Subscribe
     public void handle(CorePluginLifecycleEvent event) {
-        assert CoreMod.getInstance() != null;
-        CoreMod.getInstance().getLogger().info("Received CorePluginLifecycleEvent: " + event.getType() + " for plugin: " + event.getPlugin().getName());
-
         if (event.getType() == CorePluginLifecycleType.LOAD) {
             CoreMod.initialize(event.getPlugin(), event.getType());
             return;
         }
 
         assert CoreMod.getInstance() != null;
+        CoreMod.getInstance().getLogger().info("Received CorePluginLifecycleEvent: " + event.getType() + " for plugin: " + event.getPlugin().getName());
         CoreMod.getInstance().setLastLifecycleType(event.getType());
     }
 }
