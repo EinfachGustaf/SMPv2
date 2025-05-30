@@ -14,6 +14,11 @@ import org.bukkit.plugin.java.JavaPlugin
 class Entrypoint: JavaPlugin() {
 
     companion object {
+        /**
+         * The instance of the Entrypoint class.
+         *
+         * This is used to access the plugin instance from anywhere in the code.
+         */
         @get:JvmStatic
         lateinit var instance: Entrypoint
     }
@@ -32,4 +37,9 @@ class Entrypoint: JavaPlugin() {
     }
 }
 
+/**
+ * The main entry point for the SMP Core plugin.
+ *
+ * This is used to access the plugin instance from anywhere in the code.
+ */
 val Plugin by lazy { Entrypoint.instance }
