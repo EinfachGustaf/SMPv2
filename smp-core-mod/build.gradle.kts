@@ -13,3 +13,9 @@ dependencies {
     compileOnly(libs.bundles.igniteMod)
     implementation(libs.alert)
 }
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
