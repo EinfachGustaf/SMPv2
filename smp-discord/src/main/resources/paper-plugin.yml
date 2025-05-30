@@ -1,0 +1,9 @@
+name: SMP-Discord
+version: '0.1+1.21.5'
+main: live.einfachgustaf.smp.plugin.discord.Entrypoint
+api-version: '1.21.5'
+dependencies:
+  SMP-Core:
+    load: BEFORE
+    required: true
+    join-classpath: true
