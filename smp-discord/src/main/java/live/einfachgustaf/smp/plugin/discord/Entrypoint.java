@@ -1,5 +1,8 @@
 package live.einfachgustaf.smp.plugin.discord;
 
+import live.einfachgustaf.smp.plugin.discord.bot.DiscordBot;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -10,11 +13,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Entrypoint extends JavaPlugin {
     private static Entrypoint instance;
     private live.einfachgustaf.smp.plugin.core.Entrypoint corePluginInstance;
+    private JDA jda;
 
     @Override
     public void onLoad() {
         instance = this;
         corePluginInstance = live.einfachgustaf.smp.plugin.core.Entrypoint.getInstance();
+    }
+
+    @Override
+    public void onEnable() {
+        jda = JDABuilder.createDefault(System.getenv("DISCORD_BOT_TOKEN")) // TODO: Create a config file for the token
+                .addEventListeners(new DiscordBot(jda)) // Register the DiscordBot as an event listener
+                .build();
     }
 
     /**
@@ -31,5 +42,13 @@ public class Entrypoint extends JavaPlugin {
      */
     public live.einfachgustaf.smp.plugin.core.Entrypoint getCorePluginInstance() {
         return corePluginInstance;
+    }
+
+    /**
+     * Returns the JDA instance used by the Discord plugin.
+     * @return the JDA instance
+     */
+    public JDA getJda() {
+        return jda;
     }
 }

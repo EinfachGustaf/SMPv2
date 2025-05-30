@@ -6,4 +6,5 @@ plugins {
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
     compileOnly(project(":smp-core"))
+    compileOnly(libs.jda)
 }
