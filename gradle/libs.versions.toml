@@ -2,7 +2,6 @@
 kotlin = "2.1.21"
 shadow = "9.0.0-beta15"
 userdev = "2.0.0-beta.17"
-resourceFactory = "1.3.0"
 alert = "1.0.8"
 paper = "1.21.5-R0.1-SNAPSHOT"
 
@@ -23,7 +22,6 @@ mixinextras-common = { group = "io.github.llamalad7", name = "mixinextras-common
 jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
 userdev = { id = "io.papermc.paperweight.userdev", version.ref = "userdev" }
-resourceFactory = { id = "xyz.jpenilla.resource-factory-bukkit-convention", version.ref = "resourceFactory" }
 
 [bundles]
 igniteMod = [
