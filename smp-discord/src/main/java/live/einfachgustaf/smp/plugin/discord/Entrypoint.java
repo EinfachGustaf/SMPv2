@@ -23,9 +23,7 @@ public class Entrypoint extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        jda = JDABuilder.createDefault(System.getenv("DISCORD_BOT_TOKEN")) // TODO: Create a config file for the token
-                .addEventListeners(new DiscordBot(jda)) // Register the DiscordBot as an event listener
-                .build();
+        provideJda();
     }
 
     /**
@@ -50,5 +48,27 @@ public class Entrypoint extends JavaPlugin {
      */
     public JDA getJda() {
         return jda;
+    }
+
+    private void provideJda() {
+        if (jda != null) {
+            getLogger().warning("JDA instance is already provided.");
+            return;
+        }
+
+        try {
+            jda = JDABuilder.createDefault(System.getenv("DISCORD_BOT_TOKEN")) // TODO: Create a config file for the token
+                    .addEventListeners(new DiscordBot(jda)) // Register the DiscordBot as an event listener
+                    .build();
+            jda.awaitReady(); // Wait for JDA to be ready
+            getLogger().info("Discord plugin enabled successfully.");
+        } catch (IllegalArgumentException e) {
+            getLogger().severe("Failed to enable Discord plugin: " + e.getMessage());
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Restore interrupted status
+            getLogger().severe("Discord plugin initialization was interrupted: " + e.getMessage());
+        } catch (Exception e) {
+            getLogger().severe("An unexpected error occurred while enabling the Discord plugin: " + e.getMessage());
+        }
     }
 }
