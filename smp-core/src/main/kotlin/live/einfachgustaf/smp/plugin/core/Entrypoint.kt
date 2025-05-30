@@ -13,8 +13,14 @@ import org.bukkit.plugin.java.JavaPlugin
 @Suppress("unused") // This class is used as the main entry point for the plugin.
 class Entrypoint: JavaPlugin() {
 
+    companion object {
+        @get:JvmStatic
+        lateinit var instance: Entrypoint
+    }
+
     override fun onLoad() {
         EventManager.callEvent(CorePluginLifecycleEvent(this, CorePluginLifecycleType.LOAD))
+        instance = this
     }
 
     override fun onEnable() {
@@ -25,3 +31,5 @@ class Entrypoint: JavaPlugin() {
         EventManager.callEvent(CorePluginLifecycleEvent(this, CorePluginLifecycleType.DISABLE))
     }
 }
+
+val Plugin by lazy { Entrypoint.instance }
