@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.jvm)
     alias(libs.plugins.userdev)
+    alias(libs.plugins.shadow)
 }
 
 repositories {
