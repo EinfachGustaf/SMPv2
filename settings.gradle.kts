@@ -9,3 +9,4 @@ rootProject.name = "smp"
 
 include("smp-core")
 include("smp-core-mod")
+include("smp-discord")

@@ -22,9 +22,10 @@ official Minecraft server of the German YouTuber [EinfachGustaf](https://youtube
 - Custom world
 
 ## 🎯️ Project Structure
-| Module     | Description                                                         |
-|------------|---------------------------------------------------------------------|
-| `smp-core` | The core module of the SMP, containing the main logic and features. |
+| Module        | Description                                                                                 |
+|---------------|---------------------------------------------------------------------------------------------|
+| `smp-core`    | The core module of the SMP, containing the main logic and features.                         |
+| `smp-discord` | The Discord bridge module, allowing communication between the Minecraft server and Discord. |
 
 ## ⬇️ Installation
 Currently, you have to compile it yourself. Java 21 is required to compile the project.
