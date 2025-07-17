@@ -15,6 +15,9 @@ official Minecraft server of the German YouTuber [EinfachGustaf](https://youtube
 > The SMP is still in development and not yet released. Join the  [Discord Server](https://discord.gg/qCZw9UeV7h) for
 > more information.
 
+> [!IMPORTANT]
+> You need Folia to run this project.
+
 ## 🍏 Features
 Take a look at the [issues](https://github.com/EinfachGustaf/SMPv2/issues) to see all features!
 
