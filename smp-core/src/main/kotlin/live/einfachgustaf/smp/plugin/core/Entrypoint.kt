@@ -42,4 +42,4 @@ class Entrypoint: JavaPlugin() {
  *
  * This is used to access the plugin instance from anywhere in the code.
  */
-val Plugin by lazy { Entrypoint.instance }
+val SMPCore by lazy { Entrypoint.instance }
