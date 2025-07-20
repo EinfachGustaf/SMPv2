@@ -20,3 +20,16 @@ inline fun <reified T : Any> ServicesManager.registerSimple(
 ) {
     register(T::class.java, instance, plugin, priority)
 }
+
+/**
+ * Shortcut to access the global [ServicesManager] from the running Bukkit server.
+ *
+ * This provides access to the service registry used to register and retrieve
+ * service providers (e.g. permission plugins, economy systems, etc.).
+ *
+ * Equivalent to: `Bukkit.getServer().getServicesManager()`
+ *
+ * @see org.bukkit.plugin.ServicesManager
+ */
+val servicesManager: ServicesManager
+    get() = Entrypoint.instance.server.servicesManager
