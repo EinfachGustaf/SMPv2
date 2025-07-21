@@ -3,3 +3,4 @@ version: '1.0'
 main: live.einfachgustaf.smp.Entrypoint
 api-version: '1.21.6'
 folia-supported: true
+load: POSTWORLD

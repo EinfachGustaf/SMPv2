@@ -2,6 +2,7 @@ package live.einfachgustaf.smp
 
 import live.einfachgustaf.smp.core.feature.FeatureContext
 import live.einfachgustaf.smp.core.feature.FeatureManager
+import live.einfachgustaf.smp.features.SpawnFeature
 import live.einfachgustaf.smp.utils.registerSimple
 import live.einfachgustaf.smp.utils.servicesManager
 import org.bukkit.plugin.java.JavaPlugin
@@ -15,7 +16,7 @@ class Entrypoint: JavaPlugin() {
 
         featureManager = FeatureManager(FeatureContext(this)).apply {
             // register all features
-            // ...
+            register(SpawnFeature())
         }
         servicesManager.registerSimple(featureManager)
     }
