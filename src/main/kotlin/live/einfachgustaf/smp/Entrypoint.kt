@@ -6,6 +6,7 @@ import live.einfachgustaf.smp.core.feature.FeatureManager
 import live.einfachgustaf.smp.features.SpawnFeature
 import live.einfachgustaf.smp.utils.registerSimple
 import live.einfachgustaf.smp.utils.servicesManager
+import org.bukkit.plugin.ServicePriority
 import org.bukkit.plugin.java.JavaPlugin
 
 class Entrypoint: JavaPlugin() {
@@ -22,8 +23,8 @@ class Entrypoint: JavaPlugin() {
         }
         databaseConnector = DatabaseConnector(this)
 
-        servicesManager.registerSimple(databaseConnector)
-        servicesManager.registerSimple(featureManager)
+        servicesManager.registerSimple(databaseConnector, priority = ServicePriority.High)
+        servicesManager.registerSimple(featureManager, priority = ServicePriority.Highest)
     }
 
     override fun onEnable() {
