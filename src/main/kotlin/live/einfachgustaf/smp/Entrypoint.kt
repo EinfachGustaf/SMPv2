@@ -2,22 +2,26 @@ package live.einfachgustaf.smp
 
 import live.einfachgustaf.smp.feature.FeatureContext
 import live.einfachgustaf.smp.feature.FeatureManager
+import live.einfachgustaf.smp.utils.registerSimple
+import live.einfachgustaf.smp.utils.servicesManager
 import org.bukkit.plugin.java.JavaPlugin
 
 class Entrypoint: JavaPlugin() {
 
-    lateinit var featureManager: FeatureManager
+    private lateinit var featureManager: FeatureManager
 
     override fun onLoad() {
         instance = this
-    }
 
-    override fun onEnable() {
         featureManager = FeatureManager(FeatureContext(this)).apply {
             // register all features
             // ...
-            enableAll()
         }
+        servicesManager.registerSimple(featureManager)
+    }
+
+    override fun onEnable() {
+        featureManager.enableAll()
     }
 
     override fun onDisable() {
