@@ -21,7 +21,7 @@ class SpawnFeature(override val name: String = "Spawn") : Feature {
                     .requires { it.sender is Player }
                     .executes { ctx ->
                         val player = ctx.source.sender as Player
-                        val loc = getSpawnLocation()
+                        val loc = Bukkit.getWorlds().first().spawnLocation
                         player.teleportAsync(loc)
                         player.sendMessage(Component.text("Du wurdest zum Spawn teleportiert!")) // TODO: better message + sound
                         return@executes 1
@@ -31,10 +31,5 @@ class SpawnFeature(override val name: String = "Spawn") : Feature {
     }
 
     override fun disable() {
-    }
-
-    private fun getSpawnLocation(): Location {
-        val world = Bukkit.getWorlds().firstOrNull() ?: throw IllegalStateException("No world loaded!")
-        return world.spawnLocation
     }
 }
