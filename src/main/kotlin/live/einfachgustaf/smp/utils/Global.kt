@@ -4,6 +4,7 @@ import live.einfachgustaf.smp.Entrypoint
 import org.bukkit.plugin.ServicePriority
 import org.bukkit.plugin.ServicesManager
 import org.bukkit.plugin.java.JavaPlugin
+import kotlin.reflect.KClass
 
 /**
  * Registers a service implementation instance with the Bukkit ServicesManager using reified type inference.
@@ -20,6 +21,23 @@ inline fun <reified T : Any> ServicesManager.registerSimple(
 ) {
     register(T::class.java, instance, plugin, priority)
 }
+
+/**
+ * Retrieves a simple registered service from the ServicesManager by its Kotlin class type.
+ *
+ * This function uses reified generics to avoid passing the Java class manually.
+ *
+ * @param T The type of the service to retrieve.
+ * @param clazz The Kotlin class reference of the service type.
+ * @return An instance of the registered service if available, or `null` otherwise.
+ *
+ * Example usage:
+ * val myService = servicesManager.getSimple<MyService>(MyService::class)
+ */
+inline fun <reified T : Any> ServicesManager.getSimple(clazz: KClass<T>): T? {
+    return getRegistration(T::class.java)?.provider
+}
+
 
 /**
  * Shortcut to access the global [ServicesManager] from the running Bukkit server.
