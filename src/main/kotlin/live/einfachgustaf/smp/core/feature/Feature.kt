@@ -1,4 +1,4 @@
-package live.einfachgustaf.smp.feature
+package live.einfachgustaf.smp.core.feature
 
 interface Feature {
     val name: String

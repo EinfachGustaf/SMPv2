@@ -1,4 +1,4 @@
-package live.einfachgustaf.smp.feature
+package live.einfachgustaf.smp.core.feature
 
 import org.bukkit.Server
 import org.bukkit.plugin.Plugin

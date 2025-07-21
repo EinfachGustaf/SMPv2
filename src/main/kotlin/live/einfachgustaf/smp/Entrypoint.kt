@@ -1,7 +1,7 @@
 package live.einfachgustaf.smp
 
-import live.einfachgustaf.smp.feature.FeatureContext
-import live.einfachgustaf.smp.feature.FeatureManager
+import live.einfachgustaf.smp.core.feature.FeatureContext
+import live.einfachgustaf.smp.core.feature.FeatureManager
 import live.einfachgustaf.smp.utils.registerSimple
 import live.einfachgustaf.smp.utils.servicesManager
 import org.bukkit.plugin.java.JavaPlugin
