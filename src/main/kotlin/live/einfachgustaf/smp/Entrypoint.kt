@@ -1,5 +1,6 @@
 package live.einfachgustaf.smp
 
+import live.einfachgustaf.smp.core.database.DatabaseConnector
 import live.einfachgustaf.smp.core.feature.FeatureContext
 import live.einfachgustaf.smp.core.feature.FeatureManager
 import live.einfachgustaf.smp.features.SpawnFeature
@@ -9,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class Entrypoint: JavaPlugin() {
 
+    private lateinit var databaseConnector: DatabaseConnector
     private lateinit var featureManager: FeatureManager
 
     override fun onLoad() {
@@ -18,6 +20,9 @@ class Entrypoint: JavaPlugin() {
             // register all features
             register(SpawnFeature())
         }
+        databaseConnector = DatabaseConnector(this)
+
+        servicesManager.registerSimple(databaseConnector)
         servicesManager.registerSimple(featureManager)
     }
 

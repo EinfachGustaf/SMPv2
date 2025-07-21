@@ -13,6 +13,11 @@ repositories {
 
 dependencies {
     paperweight.foliaDevBundle("1.21.6-R0.1-SNAPSHOT")
+
+    implementation("org.jetbrains.exposed", "exposed-core", "1.0.0-beta-4")
+    implementation("org.jetbrains.exposed", "exposed-dao", "1.0.0-beta-4")
+    implementation("org.jetbrains.exposed", "exposed-jdbc", "1.0.0-beta-4")
+    implementation("com.h2database:h2:2.3.232") // TODO: remove!!! only for testing!
 }
 
 kotlin {
