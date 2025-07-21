@@ -33,7 +33,6 @@ class SpawnFeature(override val name: String = "Spawn") : Feature {
     }
 
     override fun disable() {
-        TODO("Not yet implemented")
     }
 
     private fun getSpawnLocation(): Location {
