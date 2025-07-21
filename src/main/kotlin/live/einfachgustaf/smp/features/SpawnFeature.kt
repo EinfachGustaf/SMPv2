@@ -36,7 +36,7 @@ class SpawnFeature(override val name: String = "Spawn") : Feature {
     }
 
     private fun getSpawnLocation(): Location {
-        val world = Bukkit.getWorlds().firstOrNull() ?: throw IllegalStateException("Keine Welt geladen")
+        val world = Bukkit.getWorlds().firstOrNull() ?: throw IllegalStateException("No world loaded!")
         return world.spawnLocation
     }
 }
