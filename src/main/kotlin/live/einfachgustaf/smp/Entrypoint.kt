@@ -4,6 +4,7 @@ import live.einfachgustaf.smp.core.database.DatabaseConnector
 import live.einfachgustaf.smp.core.feature.FeatureContext
 import live.einfachgustaf.smp.core.feature.FeatureManager
 import live.einfachgustaf.smp.features.SpawnFeature
+import live.einfachgustaf.smp.teams.TeamsFeature
 import live.einfachgustaf.smp.utils.registerSimple
 import live.einfachgustaf.smp.utils.servicesManager
 import org.bukkit.plugin.ServicePriority
@@ -20,6 +21,7 @@ class Entrypoint: JavaPlugin() {
         featureManager = FeatureManager(FeatureContext(this)).apply {
             // register all features
             register(SpawnFeature())
+            register(TeamsFeature())
         }
         databaseConnector = DatabaseConnector(this)
 
