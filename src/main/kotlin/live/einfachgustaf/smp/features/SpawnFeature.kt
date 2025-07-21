@@ -6,7 +6,6 @@ import live.einfachgustaf.smp.core.feature.Feature
 import live.einfachgustaf.smp.core.feature.FeatureContext
 import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
-import org.bukkit.Location
 import org.bukkit.entity.Player
 
 class SpawnFeature(override val name: String = "Spawn") : Feature {
