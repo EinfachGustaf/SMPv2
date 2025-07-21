@@ -30,6 +30,5 @@ class SpawnFeature(override val name: String = "Spawn") : Feature {
         }
     }
 
-    override fun disable() {
-    }
+    override fun disable() = Unit
 }
