@@ -9,4 +9,5 @@ object TeamTable : Table("smp_teams") {
     val owner = uuid("owner")
     val color = varchar("color", 7) // as hex value
     val maxPlayers = integer("max_players")
+    override val primaryKey = PrimaryKey(id)
 }

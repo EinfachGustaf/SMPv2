@@ -14,5 +14,5 @@ interface TeamManager {
     fun updateTeam(
         id: Int,
         team: SMPTeam
-    )
+    ): Boolean
 }
