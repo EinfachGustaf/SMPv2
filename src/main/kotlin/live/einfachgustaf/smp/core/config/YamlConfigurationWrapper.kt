@@ -31,7 +31,7 @@ class YamlConfigurationWrapper(private val file: File) {
     /**
      * Saves the configuration to disk.
      */
-    fun save() {
+    fun save() = synchronized(Any()) {
         config.save(file)
     }
 
