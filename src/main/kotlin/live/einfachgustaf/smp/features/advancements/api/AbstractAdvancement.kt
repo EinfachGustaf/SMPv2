@@ -11,7 +11,7 @@ abstract class AbstractAdvancement(
     val displayIcon: ItemStack,
     val description: TextComponent? = Component.empty(),
     val type: AdvancementType,
-    val unlocks: AbstractAdvancement? = null
+    val unlocks: List<AbstractAdvancement> = listOf()
 ) {
     abstract fun construct(context: AdvancementContext)
 
